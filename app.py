@@ -19,10 +19,7 @@ st.set_page_config(
 # -----------------------------------
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model(
-        "titanic_ann_model.h5",
-        compile=False
-    )
+    model = tf.keras.models.load_model("titanic_ann_model.keras")
     return model
 
 model = load_model()
